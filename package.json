@@ -1,0 +1,20 @@
+{
+  "name": "manna-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node ./db/seed.js", 
+    "dbconnect": "source .env && psql -h $PGHOST --port=5432 -U $PGUSER --dbname=$PGDATABASE"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "dotenv-cli": "^5.1.0",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-format": "^1.0.4"
+  }
+}

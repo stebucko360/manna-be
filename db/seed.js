@@ -36,7 +36,8 @@ db.connect()
         return client.query(query);
       });
   })
-  .then(() => db.end())
+  .then(() => client.end())
   .catch((err) => {
     console.log("error: ", err);
+    client.release();
   });
